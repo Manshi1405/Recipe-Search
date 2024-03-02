@@ -1,0 +1,12 @@
+<%- include("partials/header"); -%>
+
+<body>
+  <div class="foodList">
+    <% foodData.results.forEach(function(data){ %>
+    <img src=<%= data.image %>><br>
+    <a class="food" href="cookingsteps/<%= data.title %>"><%=data.title%></a>
+    <br><br>
+    <%  }); %>
+  </div>
+</body>
+<%- include("partials/footer"); -%>

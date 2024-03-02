@@ -1,0 +1,21 @@
+<%- include("partials/header"); -%>
+
+<body>
+  <img src="<%= recipeData.image %>" class="center">
+  <h2 class="textmargin">Description:</h2>
+  <p class="textmargin"><%= recipeData.winePairing.pairingText %></p>
+  <h2 class="textmargin">Ingredients</h2>
+  <ul class="textmargin">
+    <% for(let i=0;i<recipeData.extendedIngredients.length;i++) { %>
+    <li><%= recipeData.extendedIngredients[i].name %></li>
+    <% } %>
+  </ul>
+
+  <h2 class="textmargin">Steps</h2>
+  <ul class="textmargin">
+    <% for(let i=0;i<recipeData.analyzedInstructions[0].steps.length;i++) { %>
+    <li><%= recipeData.analyzedInstructions[0].steps[i].step %></li>
+    <% } %>
+  </ul>
+
+</body>
